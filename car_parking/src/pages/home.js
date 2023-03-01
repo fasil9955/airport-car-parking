@@ -1,69 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Airport Parking Reservations.com: Discount Airport Parking Reservations at airports nationwide</title>
-    <meta name="description"
-        content="Airport Parking Reservations" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" href="/assets/bootstrap.css">
-    <link rel="stylesheet" href="/assets/style.css">
-
-   
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-</head>
-
-<body>
+const Home = () =>{
+    return (
+      <div id="root" >
+         <body>
     <div id="app" class="generic">
         <div>
-            <app-header>
-                <header>
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <a class="navbar-brand" href="/"><img src="/assets/navigation_logo.png"
-                                alt="AIRPORT PARKING - RESERVATIONS.COM" itemprop="logo" height="40" /></a>
-
-
-                        <div class="col"></div>
-
-
-
-                        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        My Account
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right"
-                                        aria-labelledby="navbarDropdownMenuLink">
-
-                                        <a class="dropdown-item sign-in" href="#">Sign In</a>
-                                        <a class="dropdown-item sign-up" href="#">Register</a>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
-            </app-header>
+            
             <div class="content">
                 <us-page-home inline-template>
                     <section id="home_page">
                         <div class="years-of-service">
                             <div class="container">
-                                For 20 years, we’ve helped travelers on their way. With free cancellations & a customer
+                                For 20 years, we've helped travelers on their way. With free cancellations & a customer
                                 service team in the US, we are committed to serving you.
                             </div>
                         </div>
                         <section id="hero"
-                            style="background-image: url('assets/generic_landing.jpg'); min-height: 500px;">
+                            style={{backgroundImage: 'url("assets/generic_landing.jpg")', minHeight: '500px'}}>
                             <div class="hero-backdrop"></div>
                             <div class="container position-relative">
                                 <div class="hero-heading mb-4">
@@ -86,7 +40,7 @@
                                                         class="fas fa-car"></i></div>
                                                 Hotel &amp; Parking Package
                                             </div>
-                                        </div> <!---->
+                                        </div> 
                                     </div>
                                     <form action="/results.html" method="post" autocomplete="off" novalidate="">
                                         <div class="options row m-0"><label class="col-12 col-xl-3 p-0 mr-xl-3 mb-2">
@@ -100,11 +54,11 @@
                                                     class="col-sm-6 p-0 pr-sm-3 date_input">
                                                     <div class="heading mb-1">Parking Check-In</div>
                                                     <div class="placeholder">
-                                                        <input name="checkin" type="date" placeholder="Parking Check-Out" class="placeholder placeholder-airport" style="width:100%"/>
+                                                        <input name="checkin" type="date" placeholder="Parking Check-Out" class="placeholder placeholder-airport" style={{width:'100%'}}/>
                                                     </div> 
                                                 </label> <label class="col-sm-6 p-0 pl-sm-0 date_input">
                                                     <div class="heading mb-1">Parking Check-Out</div>
-                                                        <input name="Check-Out" type="date" placeholder="Parking Check-Out" class="placeholder placeholder-airport" style="width:100%"/>
+                                                        <input name="Check-Out" type="date" placeholder="Parking Check-Out" class="placeholder placeholder-airport" style={{width:'100%'}}/>
                                                    
                                                 </label></div>
                                             <div class="col-12 col-xl-2 p-0 pl-xl-3 my-3 my-xl-0">
@@ -158,82 +112,20 @@
             </div>
 
 
-            <section id="footer">
-                <div class="container">
-
-                    <div class="row">
-                        <div class="col-4 col-lg-2 footer-links text-center text-lg-left">
-                            <p>Navigation</p>
-                            <ul>
-                                <li><a href="/" title="Home">Home</a></li>
-
-
-                            </ul>
-                        </div>
-
-                        <div class="col-4 col-lg-2 footer-links text-center text-lg-left">
-                            <p>Get Involved</p>
-                            <ul>
-                                <li><a href="/register/partner" title="Parking Partners">Parking Partners</a></li>
-
-                            </ul>
-                        </div>
-
-                        <div class="col-4 col-lg-2 footer-links text-center text-lg-left">
-                            <p>Discover</p>
-                            <ul>
-                                <li><a href="/help" title="Customer Service">Help</a></li>
-
-                            </ul>
-                        </div>
-
-                        <div class="social-media col-md-6 hidden-md-down">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="social-media-icons">
-                                        <a href="#"
-                                            title="Facebook" target="_blank">
-                                            <div class="fab fa-facebook-f fa-2x"></div>
-                                            <span>Facebook</span>
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                                <div class="col">
-                                    <div class="social-media-icons">
-                                        <a href="#" title="Instagram"
-                                            target="_blank">
-                                            <div class="fab fa-instagram fa-2x"></div>
-                                            <span>Instagram</span>
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                                <div class="col">
-                                    <div class="social-media-icons">
-                                        <a href="#"
-                                            title="Linkedin" target="_blank">
-                                            <div class="fab fa-linkedin-in fa-2x"></div>
-                                            <span>Linkedin</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="copyright">
-                        © 2000 - 2023 AirportParkingReservations.com, Inc. All Rights Reserved.<br />
-                        MAG USA, 100 North Lasalle Street, Chicago, IL, 60602
-                    </div>
-                </div>
-            </section>
+           
         </div>
     </div>
 
 
 </body>
-
-</html>
+       
+        
+ 
+    
+  
+      </div>
+      
+    );
+  }
+  
+  export default Home;
