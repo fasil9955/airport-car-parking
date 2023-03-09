@@ -1,75 +1,73 @@
-import Header from './header';
-import Footer from './footer';
-import Form from './searchform';
-const Home = () =>{
-    return (
-      <div id="root" >
+import Footer from "./footer";
+// import Header from "./Header";
+import SearchForm from "./searchform";
+
+function HomePage() {
+    
+  return (
+    <div className="App">
+          <div id="app" className="generic">
         <div>
-        <Header/>
-      </div>
-        
-         <body>
-    <div id="app" class="generic">
-        <div>
-            
-            <div class="content">
+            {/* <app-header>
+                <Header/>
+            </app-header> */}
+            <div className="content">
                 <us-page-home inline-template>
                     <section id="home_page">
-                        <div class="years-of-service">
-                            <div class="container">
+                        <div className="years-of-service">
+                            <div className="container">
                                 For 20 years, we've helped travelers on their way. With free cancellations & a customer
                                 service team in the US, we are committed to serving you.
                             </div>
                         </div>
                         <section id="hero"
-                            style={{backgroundImage: 'url("assets/generic_landing.jpg")', minHeight: '500px'}}>
-                            <div class="hero-backdrop"></div>
-                            <div class="container position-relative">
-                                <div class="hero-heading mb-4">
+                            style={{ 
+                              backgroundImage: `url(${process.env.PUBLIC_URL}/assets/generic_landing.jpg)`,
+                              minHeight: '500px'
+                            }}>
+                            <div className="hero-backdrop"></div>
+                            <div className="container position-relative">
+                                <div className="hero-heading mb-4">
                                     <h1>SAVE BIG ON AIRPORT PARKING</h1>
                                     <h2>We have the best deals for airport parking lots!</h2>
                                 </div>
-                                <div class="searchbox landing">
-                                    <div class="row tabs">
-                                        <div class="tab">
-                                            <div class="heading">Most Convenient</div>
-                                            <div class="button">
-                                                <div class="icon"><i class="fas fa-car"></i></div>
+                                <div className="searchbox landing">
+                                    <div className="row tabs">
+                                        <div className="tab">
+                                            <div className="heading">Most Convenient</div>
+                                            <div className="button">
+                                                <div className="icon"><i className="fas fa-car"></i></div>
                                                 Airport Parking Only
                                             </div>
                                         </div>
-                                        <div class="tab">
-                                            <div class="heading">Best Value</div>
-                                            <div class="button">
-                                                <div class="icon"><i class="fas fa-bed"></i> + <i
-                                                        class="fas fa-car"></i></div>
+                                        <div className="tab">
+                                            <div className="heading">Best Value</div>
+                                            <div className="button">
+                                                <div className="icon"><i className="fas fa-bed"></i> + <i
+                                                        className="fas fa-car"></i></div>
                                                 Hotel &amp; Parking Package
                                             </div>
                                         </div> 
                                     </div>
-                                    <div>
-
-                                                        <Form/>
-                                     </div>
-                                    
+                                    <SearchForm/>
                                 </div>
                             </div>
                         </section>
                         <section id="benefits">
-                            <div class="container">
+                            <div className="container">
                                 <h5>What Can You Save with AirportParkingReservations.com?</h5>
 
-                                <ul class="row">
-                                    <li class="col-12 col-lg-4 p-3">
-                                        <img src="/assets/check.png" alt="Tick" width="50" height="50" />
+                                <ul className="row">
+                                    <li className="col-12 col-lg-4 p-3">
+                                        <img src={require("../assets/check.png")} alt="Tick" width="50" height="50" />
                                         <div>
                                             <h6>Save Money</h6>
                                             <p>Save up to 70% off on our site compared to the cost of on-airport
                                                 parking.</p>
                                         </div>
                                     </li>
-                                    <li class="col-12 col-lg-4 p-3">
-                                        <img src="/assets/check.png" alt="Tick" width="50" height="50" />
+                                    <li className="col-12 col-lg-4 p-3">
+                                        <img src={require("../assets/check.png")} alt="Tick" width="50" height="50" />
                                         <div>
                                             <h6>Save Time</h6>
                                             <p>
@@ -78,8 +76,8 @@ const Home = () =>{
                                             </p>
                                         </div>
                                     </li>
-                                    <li class="col-12 col-lg-4 p-3">
-                                        <img src="/assets/check.png" alt="Tick" width="50" height="50" />
+                                    <li className="col-12 col-lg-4 p-3">
+                                        <img src={require("../assets/check.png")} alt="Tick" width="50" height="50" />
                                         <div>
                                             <h6>Save Stress</h6>
                                             <p>
@@ -95,27 +93,12 @@ const Home = () =>{
                     </section>
                 </us-page-home>
             </div>
-
-
-           
+            <Footer/>
         </div>
     </div>
 
+    </div>
+  );
+}
 
-</body>
-
-     <div>
-
-        <Footer/>
-      </div>
-       
-        
- 
-    
-  
-      </div>
-      
-    );
-  }
-  
-  export default Home;
+export default HomePage;

@@ -1,23 +1,20 @@
-import Home from './pages/home.js';
-
-
-
-
-const App = () => {
+import './assets/style.css';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import HomePage from './pages/home';
+import Login from './pages/Login';
+function App() {
   return (
-    <div>
-      
-      <div>
-        <Home/>
-      </div>
-      
-      
-     
-       
-      
-  </div>
-    
-
+   <BrowserRouter>
+   <Routes>
+   <Route path="/" element={<Layout/>}>
+   <Route path="/" index element={<HomePage/>}/>
+   <Route path="/login" element={<Login/>}/>
+   <Route path="*" element={<HomePage/>}/>
+   
+   </Route>
+   </Routes>
+   </BrowserRouter>
   );
 }
 
